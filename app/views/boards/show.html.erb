@@ -2,12 +2,9 @@
 
   <div class="row mb-3">
     <div class="col-md-12 d-flex align-items-center">
-      <h1>
-        <%= @the_board.name %>
-      </h1>
-
+      <h1><%= @the_board.name %></h1>
       <div class="ms-auto">
-        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#newPostModal">
+        <button type="button" class="btn btn-outline-success alert alert-success" role="alert" data-bs-toggle="modal" data-bs-target="#newPostModal">
           Add new post
         </button>
       </div>
@@ -112,7 +109,7 @@
               <input type="date" id="expires_on_box" name="query_expires_on" class="form-control">
             </div>
 
-            <input type="hidden" id="board_id_box" name="query_board_id" value="2713">
+            <input type="hidden" id="board_id_box" name="query_board_id" value="<%= @the_board.id %>">
 
             <div class="d-grid">
               <button class="btn btn-primary">
