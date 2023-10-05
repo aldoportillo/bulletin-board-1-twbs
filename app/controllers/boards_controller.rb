@@ -14,7 +14,7 @@ class BoardsController < ApplicationController
 
     @the_board = matching_boards.at(0)
 
-    @matching_posts = Post.where({ :board_id => @the_board.id })
+    @matching_posts = Post.where({ :board_id => the_id })
 
     @active_posts = @matching_posts.where({ :expires_on => (Time.current...) }).order(:expires_on)
     
